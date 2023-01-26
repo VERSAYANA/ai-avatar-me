@@ -135,12 +135,15 @@ const Home = () => {
             </div>
           </div>
         </div>
+        {img && (
+          <div className="output-content">
+            <Image src={img} width={512} height={512} alt={finalPrompt} />
+            {/* Add prompt here */}
+            <p>{finalPrompt}</p>
+          </div>
+        )}
       </div>
-      {img && (
-        <div className="output-content">
-          <Image src={img} width={512} height={512} alt={input} />
-        </div>
-      )}
+
       <div className="badge-container grow">
         <a
           href="https://buildspace.so/builds/ai-avatar"
